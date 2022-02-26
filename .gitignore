@@ -378,6 +378,3 @@ Icon
 .Trashes
 
 .vscode
-
-# added bin to git ignore to avoid uploading executables
-bin/**/*
