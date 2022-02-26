@@ -361,3 +361,23 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+#################### OS X ####################
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two \r.
+Icon
+
+# Thumbnails
+._*
+
+# OS X Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+.vscode
+
+# added bin to git ignore to avoid uploading executables
+bin
