@@ -1,4 +1,4 @@
-workspace "Space Invaders"
+workspace "Space_Invaders"
 
 	architecture "x86"
 	
@@ -10,8 +10,8 @@ workspace "Space Invaders"
 	}
 
 outputdir="%{cfg.system	}-%{cfg.buildcfg}-%{cfg.architecture}"
-project "Space Invaders"
-	location "Space Invaders"
+project "Space_Invaders"
+	location "Space_Invaders"
 	kind "ConsoleApp"
 
 	language "C++"
@@ -78,83 +78,3 @@ project "Space Invaders"
 	
 		}
 
-
-	--for Linux///////////////////////////////////////////////////////////////////////////////////////////////
-	filter "system:Unix"
-		system "linux"
-		cppdialect "C++17"
-		cdialect "C89"
-		staticruntime "On"
-		systemversion "latest"
-
-		defines
-		{
-			"_CRT_SECURE_NO_WARNINGS"	
-		}
-
-	filter "configurations:Debug"
-		symbols "On"
-		buildoptions "/MDd"
-		links
-		{
-			
-			"sfml-system-d",
-			"sfml-graphics-d",
-			"sfml-window-d",
-			"sfml-audio-d",
-			"sfml-network-d",
-	
-		}
-	filter "configurations:Release"
-		optimize "On"
-		buildoptions "/MD"
-		links
-		{
-			"sfml-system",
-			"sfml-graphics",
-			"sfml-window",
-			"sfml-audio",
-			"sfml-network",
-
-	
-		}
-
-	--for Mac///////////////////////////////////////////////////////////////////////////////////////////////
-	filter "system:Mac"
-		system "macosx"
-		cppdialect "C++17"
-		cdialect "C89"
-		staticruntime "On"
-		systemversion "latest"
-
-		defines
-		{
-			"_CRT_SECURE_NO_WARNINGS"	
-		}
-
-	filter "configurations:Debug"
-		symbols "On"
-		buildoptions "/MDd"
-		links
-		{
-			
-			"sfml-system-d",
-			"sfml-graphics-d",
-			"sfml-window-d",
-			"sfml-audio-d",
-			"sfml-network-d",
-	
-		}
-	filter "configurations:Release"
-		optimize "On"
-		buildoptions "/MD"
-		links
-		{
-			"sfml-system",
-			"sfml-graphics",
-			"sfml-window",
-			"sfml-audio",
-			"sfml-network",
-
-	
-		}
